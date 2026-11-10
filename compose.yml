@@ -1,0 +1,32 @@
+name: windows
+
+services:
+  windows:
+    image: dockurr/windows:6.06
+    container_name: windows
+    environment:
+      VERSION: "10i" # Windows 10 IoT Enterprise LTSC 2021 (bản đầy đủ, được vá bảo mật tới 2032)
+      USERNAME: "${WIN_USER:?}"
+      PASSWORD: "${WIN_PASS:?}"
+      RAM_SIZE: "4G"
+      CPU_CORES: "4"
+      DISK_SIZE: "64G"
+      ALLOCATE: "N"
+      BALLOONING: "Y"
+      BALLOONING_MIN_MEM: "2G"
+      TZ: "Asia/Ho_Chi_Minh"
+    devices:
+      - /dev/kvm
+      - /dev/net/tun
+    cap_add:
+      - NET_ADMIN
+    ports: # chỉ mở cho localhost vì trang web 8006 không có mật khẩu
+      - "127.0.0.1:8006:8006"
+      - "127.0.0.1:3389:3389/tcp"
+      - "127.0.0.1:3389:3389/udp"
+    volumes:
+      - ./storage:/storage
+      - ./shared:/shared
+      - ./oem:/oem
+    restart: unless-stopped
+    stop_grace_period: 2m

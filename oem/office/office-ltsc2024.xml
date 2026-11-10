@@ -1,0 +1,24 @@
+<Configuration>
+  <Add OfficeClientEdition="64" Channel="PerpetualVL2024">
+    <Product ID="ProPlus2024Volume">
+      <Language ID="en-us" />
+      <ExcludeApp ID="Access" />
+      <ExcludeApp ID="Bing" />
+      <ExcludeApp ID="Groove" />
+      <ExcludeApp ID="Lync" />
+      <ExcludeApp ID="OneDrive" />
+      <ExcludeApp ID="OneNote" />
+      <ExcludeApp ID="Outlook" />
+      <ExcludeApp ID="Publisher" />
+      <ExcludeApp ID="Teams" />
+    </Product>
+    <Product ID="ProofingTools">
+      <Language ID="vi-vn" />
+    </Product>
+  </Add>
+  <Updates Enabled="TRUE" Channel="PerpetualVL2024" />
+  <Property Name="AUTOACTIVATE" Value="1" />
+  <Property Name="FORCEAPPSHUTDOWN" Value="TRUE" />
+  <Logging Level="Standard" Path="C:\OEM\logs\odt" />
+  <Display Level="None" AcceptEULA="TRUE" />
+</Configuration>

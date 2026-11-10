@@ -1,0 +1,4 @@
+.env
+storage/
+shared/*
+!shared/.gitkeep
