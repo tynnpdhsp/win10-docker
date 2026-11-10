@@ -80,6 +80,8 @@ cscript ospp.vbs /dstatus
 
 Khi dùng KMS server khác, thay lệnh `/inpkey` bằng lệnh `cscript ospp.vbs /sethst:<kms-server>`. Windows được kích hoạt bằng lệnh `slmgr /ipk <key>`, sau đó là lệnh `slmgr /ato`.
 
+Có thể tham khảo xem thêm cách kích hoạt từ repo của massgravel [tại đây](https://github.com/massgravel/Microsoft-Activation-Scripts) (không khuyến khích).
+
 ## 8. Gõ tiếng Việt
 
 Windows có sẵn bàn phím Vietnamese Telex. Thêm bàn phím này theo đường dẫn Settings → Time & Language → Language → Add a language → Tiếng Việt → Options → Add a keyboard. Tổ hợp phím `Win + Space` dùng để chuyển bàn phím. Cũng có thể cài UniKey hoặc EVKey.
